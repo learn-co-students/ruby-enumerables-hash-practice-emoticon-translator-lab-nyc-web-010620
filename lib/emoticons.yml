@@ -37,3 +37,36 @@ surprised:
 wink:
   - ";)"
   - "(^_-)"
+  
+load_libary = emoticons.yml
+
+# emoticons.yml
+-happy
+-kiss
+-sad
+-suprised
+-wink
+
+require "yaml"
+emoticons = YAML.load_file('emoticons.yml')
+ 
+emoticons
+# => ["happy","kiss","sad","suprised", "wink"]
+
+hash = {"get_emoticon" => {}}
+hash #=> {"get_emoticon"=>{}}
+
+hash = {"get_emoticon": {}}
+hash #=> 
+
+def load_library(file_path)
+     # code goes here
+     file_path = YAML.load_file('emoticons.yml')
+     file_path
+   end
+   
+   def load_library(file_path)
+     # code goes here
+     file_path = YAML.load_file('emoticons.yml')
+     file_path
+   end
